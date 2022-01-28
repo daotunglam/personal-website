@@ -1,0 +1,17 @@
+#contact .bground-container {
+    display: flex;
+    justify-content: end;
+}
+#contact .bground {
+    border: solid 2px white;
+    width: 40vw;
+}
+
+#contact .btn-email {
+    border-top: solid 1px transparent;
+    border-bottom: solid 1px transparent;
+}
+#contact .btn-email:hover {
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+}

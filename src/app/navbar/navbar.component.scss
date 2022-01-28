@@ -1,0 +1,36 @@
+#navbar {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 0;
+
+    /*when it's closed: */
+    overflow: hidden;
+    /*otherwise its children are still visible while it's closed*/
+
+    background-image: linear-gradient(to right, white, black);
+    transition: all 0.5s;
+
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        font-size: 3rem;
+        padding: 2rem;
+        border-bottom: solid 1px transparent;
+        &:hover {
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+            border-bottom: solid 1px currentColor;
+            transition: all 0.1s;
+        }
+    }
+
+    &.open {
+        height: 100vh;
+    }
+}

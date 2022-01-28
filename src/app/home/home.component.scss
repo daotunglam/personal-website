@@ -1,0 +1,61 @@
+#home {
+    /* background-image: radial-gradient(closest-side at 84% 84%,white -300%,black 300%); */
+    background-image: linear-gradient(to right bottom, black 56%, gray 120%);
+
+    .bground-container {
+        padding: 0rem;
+        position: absolute;
+        top: auto;
+        left: auto;
+        right: 0;
+        bottom: 0;
+        height: 80vh;
+        max-width: 60%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+
+        .bground {
+            opacity: 0.7;
+        }
+    }
+}
+
+#btnContactMe {
+    margin: 5rem;
+    text-decoration: none;
+    color: white;
+
+    * {
+        width: fit-content;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 0.5rem 1rem 0.5rem 3rem;
+        border-radius: 0 3rem 3rem 0;
+
+        &:hover {
+            padding-left: 4rem;
+            transition: all 0.25s;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #home .bground-container {
+        height: 70vh;
+    }
+
+    #home .sectionTopic {
+        top: 8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #home .bground-container {
+        height: 60vh;
+        max-width: 100%;
+    }
+
+    #home .sectionTopic {
+        top: 10rem;
+    }
+}
