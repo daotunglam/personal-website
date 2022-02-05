@@ -14,6 +14,15 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { IsInViewPortService } from './is-in-view-port.service';
+import { MatCardModule } from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { DialogProjectsFullDetailComponent } from './dialog-projects-full-detail/dialog-projects-full-detail.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -26,14 +35,23 @@ import { IsInViewPortService } from './is-in-view-port.service';
     AboutComponent,
     SidenavComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    DialogProjectsFullDetailComponent,
   ],
   imports: [
+    MatDialogModule,
+    MatIconModule,
+    MatButtonModule,
+    MatInputModule,
+    FormsModule,
+    MatFormFieldModule,
+    HttpClientModule,
+    MatCardModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
-  providers: [IsInViewPortService],
+  providers: [IsInViewPortService, ProjectsComponent, AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

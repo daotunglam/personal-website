@@ -1,19 +1,35 @@
 <section id="contact">
     <div class="sectionTopic">
-        <div>
-            <h1>CONTACT ME</h1>
-        </div>
+        <h1>CONTACT</h1>
+        <a href="mailto:lam90namdinh@gmail.com" style="text-decoration: none; color: currentColor;">
+            <h2 class="btn-email">
+                lam90namdinh@gmail.com
+            </h2>
+        </a>
+    </div>
 
-        <div>
-            <a href="mailto:lam90namdinh@gmail.com" style="text-decoration: none; color: currentColor;">
-                <h2 class="btn-email">
-                    lam90namdinh@gmail.com
-                </h2>
-            </a>
-        </div>
-    </div>
-    
     <div class="bground-container">
-        <div class="bground"></div>
+        <form class="bground card" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
+            <mat-form-field appearance="legacy">
+                <mat-label>Your Name</mat-label>
+                <input matInput type="text" id="name" required [(ngModel)]="contact.name" name="name" #name="ngModel" />
+            </mat-form-field>
+            <mat-form-field appearance="legacy">
+                <mat-label>Your Email</mat-label>
+                <input matInput type="email" required [(ngModel)]="contact.email" name="email" #email="ngModel" />
+            </mat-form-field>
+            <mat-form-field appearance="legacy">
+                <mat-label>Your Message</mat-label>
+                <textarea matInput name="" id="" rows="12" required placeholder="What would you like to tell me?"
+                    [(ngModel)]="contact.message" name="message" #message="ngModel"></textarea>
+            </mat-form-field>
+
+            <button class="btn-send" mat-flat-button color="primary" type="submit" [disabled]="!contactForm.form.valid">
+                Send
+            </button>
+
+        </form>
     </div>
+
 </section>

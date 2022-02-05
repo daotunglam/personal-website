@@ -1,27 +1,30 @@
 <section id="projects">
     <div class=" sectionTopic">
-    <div>
-        <h1>PROJECTS</h1>
-    </div>
+        <div>
+            <h1>PROJECTS</h1>
+        </div>
 
-    <div>
-        <h2 class="btn-extend active" onclick="transformProjectsContainer()">
-            let's see how powerful you are
-        </h2>
-    </div>
-    </div>
-
-
-    <div id="projectsContainer" class="bground-container">
-        <div id="stage" class="bground">
-            <div id="shape" class="backfaces stack">
-                
-            </div>
+        <div>
+            <h2 class="btn-extend active" (click)="transformProjectsContainer()">
+                let's see how powerful you are
+            </h2>
         </div>
     </div>
 
-    <div id="fullDetail-container" class="card text-center">
 
+    <div class="bground-container" id="projectsContainer">
+        <div id="stage" class="bground">
+            <div id="shape" class="backfaces" [class.stack]="stack" [class.ring]="ring">
+
+                <div *ngFor="let project of projects; index as i" class="project {{project.id}}"
+                    style="background-image: url('{{project.backgroundImg}}');" (click)="openDialog(i)">
+
+                    <p>{{project.name}}</p>
+
+                </div>
+
+            </div>
+        </div>
     </div>
 
 </section>

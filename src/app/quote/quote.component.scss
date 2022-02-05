@@ -1,21 +1,46 @@
 /************ QUOTE ***********/
-#quote .sectionTopic {
-    display: flex;
-    align-items: center;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    white-space: nowrap;
-    background-color: black;
+#quote {
+    .sectionTopic {
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        white-space: nowrap;
+        background-color: black;
+    }
+    .bground-container {
+        position: absolute;
+        height: 60vh;
+        top: 7rem;
+        right: 1rem;
+        left: 1rem;
+        display: flex;
+        justify-content: end;
+        overflow: hidden;
+        .bground {
+            border: solid 2px white;
+            width: 40vw;
+        }
+    }
+    @media (min-width: 480px) {
+        .bground-container {
+            right: 4rem;
+            left: 4rem;
+        }
+    }
+    @media (min-width: 800px) {
+        .sectionTopic h2 {
+            font-size: 1.5rem;
+        }
+        .bground-container {
+            height: 72vh;
+            right: 6rem;
+            left: 6rem;
+        }
+    }
 }
 
-#quote .bground-container{
-    display: flex;
-    justify-content: end;
-}
-
-#quote .bground{
-    border: solid 2px white;
-    width: 40vw; 
-}
 /************ QUOTE ***********/

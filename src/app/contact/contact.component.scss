@@ -1,17 +1,77 @@
-#contact .bground-container {
-    display: flex;
-    justify-content: end;
-}
-#contact .bground {
-    border: solid 2px white;
-    width: 40vw;
-}
+#contact {
+    .sectionTopic {
+        position: absolute;
+        top: 7rem;
+        left: 1rem;
+        h1 {
+            padding: 1rem 0;
+            font-size: 3rem;
+            margin: 0;
+        }
+        h2 {
+            margin: 0;
+        }
 
-#contact .btn-email {
-    border-top: solid 1px transparent;
-    border-bottom: solid 1px transparent;
-}
-#contact .btn-email:hover {
-    border-top: solid 1px white;
-    border-bottom: solid 1px white;
+        .btn-email {
+            border-top: solid 1px transparent;
+            border-bottom: solid 1px transparent;
+    
+            &:hover {
+                border-top: solid 1px white;
+                border-bottom: solid 1px white;
+            }
+        }
+    }
+
+    .bground-container {
+        position: absolute;
+        top: auto;
+        bottom: 4rem;
+        right: 1rem;
+        left: 1rem;
+        height: 60vh;
+        width: calc(100% - 2rem);
+        overflow: hidden;
+        background-color: transparent;
+        .bground {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            height: 100%;
+            background-color: rgba(255,255,255,0.9);
+        }
+        .btn-send {
+            width: 5rem;
+        }
+    }
+
+    @media (min-width: 480px) {
+        .sectionTopic {
+            left: 4rem;
+        }
+        .bground-container {
+            right: 4rem;
+            left: 4rem;
+            width: calc(100% - 8rem);
+        }
+    }
+
+    @media (min-width: 800px) {
+        .sectionTopic {
+            left: 6rem;
+            h1 {
+                font-size: 4rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+        .bground-container {
+            right: 6rem;
+            left: 6rem;
+            width: calc(100% - 12rem);
+        }
+    }
 }

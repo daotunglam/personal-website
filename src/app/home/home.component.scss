@@ -2,15 +2,30 @@
     /* background-image: radial-gradient(closest-side at 84% 84%,white -300%,black 300%); */
     background-image: linear-gradient(to right bottom, black 56%, gray 120%);
 
-    .bground-container {
-        padding: 0rem;
+    .sectionTopic {
         position: absolute;
+        top: 10rem;
+        left: 1rem;
+        z-index: 1;
+        h1 {
+            padding: 1rem 0;
+            font-size: 3rem;
+            margin: 0;
+        }
+        h2 {
+            font-size: 1rem;
+        }
+    }
+    
+    .bground-container {
+        position: absolute;
+        padding: 0rem;
         top: auto;
         left: auto;
         right: 0;
         bottom: 0;
-        height: 80vh;
-        max-width: 60%;
+        height: 60vh;
+        max-width: 100%;
         overflow: hidden;
         display: flex;
         justify-content: center;
@@ -19,6 +34,35 @@
             opacity: 0.7;
         }
     }
+
+    @media (min-width: 480px) {
+        .sectionTopic {
+            left: 4rem;
+            h1 {
+                font-size: 3rem;
+            }
+        }
+        .bground-container {
+            height: 70vh;
+        }
+    }
+
+    @media (min-width: 800px) {
+        .sectionTopic {
+            top: 40%;
+            left: 6rem;
+            h1 {
+                font-size: 4rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+        .bground-container {
+            height: 80vh;
+        }
+    }
+
 }
 
 #btnContactMe {
@@ -36,26 +80,5 @@
             padding-left: 4rem;
             transition: all 0.25s;
         }
-    }
-}
-
-@media (max-width: 800px) {
-    #home .bground-container {
-        height: 70vh;
-    }
-
-    #home .sectionTopic {
-        top: 8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    #home .bground-container {
-        height: 60vh;
-        max-width: 100%;
-    }
-
-    #home .sectionTopic {
-        top: 10rem;
     }
 }

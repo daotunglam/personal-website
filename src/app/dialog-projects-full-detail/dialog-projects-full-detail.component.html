@@ -1,0 +1,29 @@
+<div class="fullDetail-container card text-center" *ngFor="let project of projectsCpn.projects; index as i"
+    [ngClass]="{'opened': opened == i}">
+
+    <button class="btn btn-close bg-light p-2" (click)="dialogRef.close()"></button>
+
+    <div class="bg-img card-image-top">
+        <img src="{{project.backgroundImg}}">
+    </div>
+
+    <div class="fullDetail card-body">
+        <h1 class="card-title m-0">{{project.name}}</h1>
+        <h3 class="card-subtitle text-secondary">{{project.programmingLanguage}}</h3>
+        <p class="card-text">{{project.description}}</p>
+        <a class="btn btn-dark" target="_blank" href="{{project.href}}">{{project.situation}}</a>
+    </div>
+
+    <button mat-button color="accent" class="prev" (click)="opened = opened - 1" [disabled]="opened == 0">
+        <mat-icon>
+            arrow_back_ios
+        </mat-icon>
+    </button>
+    <button mat-button color="accent" class="next" (click)="opened = opened + 1"
+        [disabled]="opened == projectsCpn.projects.length-1">
+        <mat-icon>
+            arrow_forward_ios
+        </mat-icon>
+    </button>
+
+</div>

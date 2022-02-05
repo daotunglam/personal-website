@@ -1,6 +1,5 @@
 /* google font */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 * {
     box-sizing: border-box;
@@ -9,14 +8,12 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
     background: #333;
     color: #fff;
     height: 100vh;
 }
-
-
-
 
 /* *********** MAIN ********** */
 #main {
@@ -39,14 +36,9 @@ body {
 
 /************ MAIN ***********/
 
-
-
-
 /************ SECTION ***********/
 section {
     background: rgba(0, 0, 0, 1) no-repeat center center/cover;
-    display: flex;
-    flex-direction: column;
     width: 100%;
     /* Scroll Snap */
     scroll-snap-align: start;
@@ -55,67 +47,47 @@ section {
 }
 
 .sectionTopic {
-    position: absolute;
-    left: 6rem;
-    top: 40%;
-    z-index: 1;
+    h1,
+    h2 {
+        transform: translateX(-100vw);
+        transition: transform 0.3s ease-in-out;
+    }
 }
 
-.sectionTopic div {
-    overflow-y: hidden;
+.bground-container {
+    .bground {
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in-out;
+    }
 }
-
-.sectionTopic h1 {
-    font-size: 4rem;
-    margin: 0;
-    transform: translateY(100%);
-    transition: transform 0.3s ease-in-out;
-}
-
-.sectionTopic h2 {
-    margin-top: 1rem;
-    margin-bottom: 0;
-    transform: translateY(100%);
-    transition: transform 0.3s ease-in-out;
-}
-
-.bground-container{
-    position: absolute;
-    height: 72vh;
-    // max-width: calc(10vw - 6rem);
-    overflow: hidden;
-    top: 7rem;
-    right: 3rem;
-    left: 3rem;
-    display: flex;
-    justify-content: center;
-}
-
-.bground-container .bground{
-    transform: translateY(100%);
-    transition: transform 0.3s ease-in-out;
-    opacity: 0.5;
-}
-
 /************ SECTION ***********/
 
-
-
 /*********** SECTION ACTIVE **********/
-section.active h1,
-section.active h2 {
-    animation: jumpout 0.8s ease-in-out 0.6s 1 normal forwards;
-    transform: translateY(0);
-    transition: transform 0.8s 0.6s ease-in-out;
+section.active .sectionTopic{
+    h1,
+    h2 {
+        animation: jumpOut 0.5s ease 0.3s 1 normal forwards;
+        transform: translateX(0);
+        transition: transform 0.8s 0.6s ease;
+    }
+}
+@keyframes jumpOut {
+    0% {
+        transform: translateX(-100vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
-section.active .bground{
-    animation: jumpout 0.5s ease-in-out 0.3s 1 normal forwards;
-    transform: translateY(0);
+section.active .bground {
+    animation: jumpUp 0.5s ease-in-out 0.3s 1 normal forwards;
+    transform: translateX(0);
     transition: transform 0.5s 0.3s ease-in-out;
 }
 
-@keyframes jumpout {
+@keyframes jumpUp {
     0% {
         transform: translateY(100%);
         height: 80%;
@@ -132,10 +104,6 @@ section.active .bground{
 }
 
 /*********** SECTION ACTIVE **********/
-
-
-
-
 
 /************ BUTTON EXTEND ***********/
 
@@ -156,7 +124,7 @@ section.active .bground{
 
 .btn-extend.active:before {
     position: absolute;
-    content: '';
+    content: "";
     display: inline-block;
     top: -180px;
     left: 0;
@@ -167,12 +135,9 @@ section.active .bground{
 }
 
 .btn-extend.active:active {
-    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3),
-        -4px -4px 6px 0 rgba(116, 125, 136, .2),
-        inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
-        inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
 }
-
 
 @keyframes shiny-btn1 {
     0% {
@@ -197,48 +162,3 @@ section.active .bground{
 }
 
 /************ BUTTON EXTEND ***********/
-
-
-
-@media (min-width: 801px) {
-    .sectionTopic h1 {
-        font-size: 7rem;
-    }
-    
-    .bground-container{
-        right: 6rem;
-        left: 6rem;
-    }
-}
-
-@media (max-width: 800px) {
-    .sectionTopic {
-        left: 4rem;
-    }
-
-    .sectionTopic h1 {
-        font-size: 5rem;
-    }
-
-    .bground-container{
-        right: 4rem;
-        left: 4rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .sectionTopic {
-        left: 1.5rem;
-    }
-
-    .sectionTopic h1 {
-        font-size: 3rem;
-    }
-
-    .bground-container{
-        height: 60vh;
-        max-width: 100%;
-        right: 1rem;
-        left: 1rem;
-    }
-}

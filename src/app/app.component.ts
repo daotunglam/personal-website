@@ -55,8 +55,5 @@ export class AppComponent implements OnInit {
 
     );
   }
-  closeProjectsContainer() {
-    //TODO on project component
-  }
 }
 
