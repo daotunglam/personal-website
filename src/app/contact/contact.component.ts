@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -27,11 +28,18 @@ export class ContactComponent implements OnInit {
     },
   };
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private _snackBar: MatSnackBar
+  ) { }
+
+  openSnackBar(name: string) {
+    this._snackBar.open(name + ', thank you for your message!', 'OK');
+  }
 
   ngOnInit(): void {
   }
-  
+
   onSubmit(ngForm: any) {
     if (ngForm.submitted && ngForm.form.valid) {
       this.http

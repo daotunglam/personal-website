@@ -1,52 +1,30 @@
 #about{
+    padding: 5rem 1rem;
     .sectionTopic {
-        position: absolute;
-        top: 10rem;
-        left: 1rem;
-        z-index: 1;
-        left: 1rem;
         h1 {
             padding: 1rem 0;
             font-size: 3rem;
             margin: 0;
-        }
-        h2 {
-            font-size: 1rem;
+            white-space: nowrap;
         }
     }
     .bground-container{
-        position: absolute;
-        padding: 0rem;
-        top: auto;
-        left: auto;
-        right: 0;
-        bottom: 0;
         height: 60vh;
-        max-width: 100%;
+        width: 100%;
         overflow: hidden;
-        display: flex;
-        justify-content: center;
-        .bground{
+        .bground img{
             opacity: 0.8;
-        }
-    }
-    
-    @media (min-width: 480px) {
-        .sectionTopic {
-            left: 4rem;
-            h1 {
-                font-size: 3rem;
-            }
-        }
-        .bground-container {
-            height: 70vh;
+            object-position: left;
         }
     }
 
+    @media (min-width: 480px) {
+        padding: 7rem 4rem 4rem;
+    }
+
     @media (min-width: 800px) {
+        padding: 7rem 6rem 4rem;
         .sectionTopic {
-            top: 40%;
-            left: 6rem;
             h1 {
                 font-size: 4rem;
             }
@@ -54,8 +32,14 @@
                 font-size: 1.5rem;
             }
         }
-        .bground-container {
-            height: 100vh;
+    }
+
+    @media (min-width: 1024px) {
+        display: flex;
+        justify-content: space-between;
+        .bground-container{
+            height: 100%;
+            margin-left: 3rem;
         }
     }
 }

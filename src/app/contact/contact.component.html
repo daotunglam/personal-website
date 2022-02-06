@@ -9,7 +9,7 @@
     </div>
 
     <div class="bground-container">
-        <form class="bground card" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+        <form class="bground card" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" action="http://tung-lam-dao.developerakademie.com/portfolio-angular/sendMail.php">
 
             <mat-form-field appearance="legacy">
                 <mat-label>Your Name</mat-label>
@@ -17,15 +17,16 @@
             </mat-form-field>
             <mat-form-field appearance="legacy">
                 <mat-label>Your Email</mat-label>
-                <input matInput type="email" required [(ngModel)]="contact.email" name="email" #email="ngModel" />
+                <input matInput type="email" required [(ngModel)]="contact.email" name="email" #email="ngModel" ngModel [email]="true" />
             </mat-form-field>
             <mat-form-field appearance="legacy">
                 <mat-label>Your Message</mat-label>
-                <textarea matInput name="" id="" rows="12" required placeholder="What would you like to tell me?"
+                <textarea matInput name="" id="" required placeholder="What would you like to tell me?"
                     [(ngModel)]="contact.message" name="message" #message="ngModel"></textarea>
             </mat-form-field>
 
-            <button class="btn-send" mat-flat-button color="primary" type="submit" [disabled]="!contactForm.form.valid">
+            <button class="btn-send" mat-flat-button color="primary" type="submit" [disabled]="!contactForm.form.valid"
+            (click)="openSnackBar(name.value)">
                 Send
             </button>
 

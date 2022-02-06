@@ -1,23 +1,14 @@
 #projects {
+    padding: 5rem 1rem;
     .sectionTopic {
-        position: absolute;
-        top: 7rem;
-        left: 1rem;
         h1 {
             padding: 1rem 0;
             font-size: 3rem;
             margin: 0;
         }
-        h2 {
-            margin: 0;
-        }
     }
+
     .bground-container {
-        position: absolute;
-        top: auto;
-        bottom: 4rem;
-        right: 1rem;
-        left: 1rem;
         overflow: hidden;
         .bground {
             height: 100%;
@@ -25,14 +16,12 @@
     }
 
     @media (min-width: 480px) {
-        .sectionTopic {
-            left: 4rem;
-        }
+        padding: 7rem 4rem 4rem;
     }
 
     @media (min-width: 800px) {
+        padding: 7rem 6rem 4rem;
         .sectionTopic {
-            left: 6rem;
             h1 {
                 font-size: 4rem;
             }
@@ -43,7 +32,6 @@
     }
 }
 
-
 #projectsContainer {
     perspective: 800;
     /* For compatibility with iPhone, we leave off the units here */
@@ -52,8 +40,7 @@
     justify-content: center;
     align-items: center;
 
-    height: 20rem;
-    width: calc(100% - 2rem);
+    height: 32rem;
 
     #stage {
         width: 100%;
@@ -67,7 +54,7 @@
 
         #shape {
             position: relative;
-            height: 200px;
+            height: 400px;
             width: 200px;
             transform-style: preserve-3d;
 
@@ -77,22 +64,36 @@
                 background-size: cover;
                 height: 100%;
                 width: 100%;
-                border: 1px solid white;
-                border-radius: 12px;
-                box-sizing: border-box;
-                text-shadow: 0px 0px 8px black;
-                // text-decoration: none;
-                font-size: 1.5rem;
-                color: white;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-radius: 10px;
                 transition: transform 2s, opacity 2s, height 0.25s, width 0.25s;
                 backface-visibility: hidden;
                 display: flex;
-                align-items: flex-end;
+                align-items: center;
                 justify-content: center;
                 text-align: center;
                 cursor: pointer;
+                // .frame{
+                //     position: absolute;
+                //     left: -10px;
+                //     top: -7px;
+                //     width: 220px;
+                //     height: 412px;
+                //     border: 0.1px solid rgba(255, 255, 255, 0.5);
+                //     border-radius: 32px;
+                // }
+                .name {
+                    display: none;
+                    font-size: 1.2rem;
+                    color: white;
+                    text-shadow: 0px 0px 20px black;
+                }
                 &:hover {
-                    border: 1px solid turquoise;
+                    z-index: 999;
+                    filter: brightness(1.2);
+                    .name {
+                        display: block;
+                    }
                 }
             }
 

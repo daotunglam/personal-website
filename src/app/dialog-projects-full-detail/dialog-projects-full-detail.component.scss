@@ -1,4 +1,3 @@
-
 .fullDetail-container {
     display: none;
     position: absolute;
@@ -14,24 +13,16 @@
         min-width: 280px;
         width: calc(100% - 2rem);
         max-width: 1024px;
-        overflow: hidden;
         white-space: pre-wrap; //alows breaking line at \n characters.
+
+        background-position: top;
+        background-size: contain;
+        background-repeat: no-repeat;
 
         .btn-close {
             position: absolute;
-            top: 0;
-            right: 0;
-        }
-        .bg-img {
-            max-height: 360px;
-            z-index: -1;
-            img {
-                max-width: 100%;
-            }
-        }
-        .fullDetail {
-            background-color: rgba(255, 255, 255, 0.7);
-            color: black;
+            top: 0.5rem;
+            right: 0.5rem;
         }
         .prev,
         .next {
@@ -46,6 +37,15 @@
         }
         .next {
             right: 0;
+        }
+        
+        .fullDetail {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: black;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
         }
     }
 }

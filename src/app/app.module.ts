@@ -23,6 +23,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { DialogProjectsFullDetailComponent } from './dialog-projects-full-detail/dialog-projects-full-detail.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     DialogProjectsFullDetailComponent,
   ],
   imports: [
+    MatSnackBarModule,
     MatDialogModule,
     MatIconModule,
     MatButtonModule,

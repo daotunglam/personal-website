@@ -19,18 +19,20 @@ export class ProjectsComponent implements OnInit {
   projects = [
     {
       id: 'one',
-      situation: 'GO TO PROJECT',
-      name: 'RING OF FIRE',
-      backgroundImg: './assets/img/ringoffire/startbox.png',
-      programmingLanguage: 'Angular, Firebase',
-      description: 'A multi-player game. \n The players play together on different devices.\n Firebase get the data of the game and send to their devices.',
-      href: 'https://ring-of-fire-9362f.web.app/'
+      situation: "IT'S BEING PREPARED",
+      name: 'KANBAN',
+      backgroundImg: './assets/img/kanban/Board.PNG',
+      backgroundImgMobile: './assets/img/kanban/mobile_Board.PNG',
+      programmingLanguage: 'Bootstrap, Javascript, PHP',
+      description: 'A Web-app with feature drag-drop that was built with Javascript.\n The web-app is able to be used by many users that conecting together on server.',
+      href: 'http://gruppe-115.developerakademie.net/task.html'
     },
     {
       id: 'two',
       situation: 'GO TO PROJECT',
       name: 'EL POLLO LOCO',
       backgroundImg: './assets/img/elpollo/intro.png',
+      backgroundImgMobile: './assets/img/elpollo/mobile_intro.jpg',
       programmingLanguage: 'Bootstrap, Javascript',
       description: 'This project is a game. \n All animations of the game are built on a HTML-canvas. \n The structure of all models are built with oriented-programming.',
       href: 'http://tung-lam-dao.developerakademie.com/El-Pollo-Loco---Game/'
@@ -40,27 +42,30 @@ export class ProjectsComponent implements OnInit {
       situation: 'GO TO PROJECT',
       name: 'POKEDEX',
       backgroundImg: './assets/img/pokedex/screenPokedex.png',
+      backgroundImgMobile: './assets/img/pokedex/mobile_screenPokedex.png',
       programmingLanguage: 'Bootstrap, Javascript, API',
       description: 'This Web-app shows all Pokemons by fetching their Data from Pokeapi,\n a full RESTful API detailing everything about the Pokémon main game series.',
       href: 'http://tung-lam-dao.developerakademie.com/Pokedex2/'
     },
     {
       id: 'four',
-      situation: "IT'S BEING PREPARED. BUT TAKE A LOOK?",
-      name: 'KANBAN',
-      backgroundImg: './assets/img/kanban/Board.PNG',
-      programmingLanguage: 'Bootstrap, Javascript, PHP',
-      description: 'A Web-app with feature drag-drop that was built with Javascript.\n The web-app is able to be used by many users that conecting together on server.',
-      href: 'http://gruppe-115.developerakademie.net/task.html'
+      situation: 'GO TO PROJECT',
+      name: 'VIET-VILLAGE',
+      backgroundImg: './assets/img/vietvillage/screenVietvillage.png',
+      backgroundImgMobile: './assets/img/vietvillage/mobile_screenVietvillage.png',
+      programmingLanguage: 'Bootstrap, Javascript',
+      description: 'A restaurant website based on Javascript, \n includes feature e-commerce from platform Gloriafood and feature Reservation from platform Opentable.',
+      href: 'https://vietvillage.restaurant/'
     },
     {
       id: 'five',
       situation: 'GO TO PROJECT',
-      name: 'VIET-VILLAGE',
-      backgroundImg: './assets/img/vietvillage/screenVietvillage.png',
-      programmingLanguage: 'Bootstrap, Javascript',
-      description: 'A restaurant website based on Javascript, \n includes feature e-commerce from platform Gloriafood and feature Reservation from platform Opentable.',
-      href: 'https://vietvillage.restaurant/'
+      name: 'RING OF FIRE',
+      backgroundImg: './assets/img/ringoffire/startbox.png',
+      backgroundImgMobile: './assets/img/ringoffire/mobile_startbox.jpg',
+      programmingLanguage: 'Angular, Firebase',
+      description: 'A multi-player game. \n The players play together on different devices.\n Firebase get the data of the game and send to their devices.',
+      href: 'https://ring-of-fire-9362f.web.app/'
     },
   ]
   opened: any;

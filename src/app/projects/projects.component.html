@@ -17,9 +17,10 @@
             <div id="shape" class="backfaces" [class.stack]="stack" [class.ring]="ring">
 
                 <div *ngFor="let project of projects; index as i" class="project {{project.id}}"
-                    style="background-image: url('{{project.backgroundImg}}');" (click)="openDialog(i)">
+                    style="background-image: url('{{project.backgroundImgMobile}}');" (click)="openDialog(i)">
 
-                    <p>{{project.name}}</p>
+                    <!-- <img class="frame" src="./assets/img/frameIphone.png"> -->
+                    <p class="name">{{project.name}}</p>
 
                 </div>
 
