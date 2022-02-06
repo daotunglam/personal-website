@@ -4,16 +4,16 @@
         h1 {
             padding: 1rem 0;
             font-size: 3rem;
-            margin: 0;
             white-space: nowrap;
         }
     }
     .bground-container{
         height: 60vh;
-        width: 100%;
+        width: fit-content;
+        max-width: 100%;
         overflow: hidden;
-        .bground img{
-            opacity: 0.8;
+        .bground{
+            opacity: 0.7;
             object-position: left;
         }
     }
