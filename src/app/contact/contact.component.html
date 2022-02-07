@@ -1,15 +1,15 @@
 <section id="contact">
     <div class="sectionTopic">
-        <h1>CONTACT</h1>
+        <h1 class="title">CONTACT</h1>
         <a href="mailto:lam90namdinh@gmail.com" style="text-decoration: none; color: currentColor;">
-            <h2 class="btn-email">
+            <h2 class="btn-email subtitle">
                 lam90namdinh@gmail.com
             </h2>
         </a>
     </div>
 
-    <div class="bground-container">
-        <form class="bground card" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" action="http://tung-lam-dao.developerakademie.com/portfolio-angular/sendMail.php">
+    <div class="bground-container jumpUp-container">
+        <form class="bground card jumpUp-item" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" action="http://tung-lam-dao.developerakademie.com/portfolio-angular/sendMail.php">
 
             <mat-form-field appearance="legacy">
                 <mat-label>Your Name</mat-label>

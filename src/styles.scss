@@ -47,15 +47,17 @@ section {
 }
 
 .sectionTopic {
-    h1,
-    h2 {
+    .title,
+    .subtitle {
         transform: translateX(-100vw);
         transition: transform 0.3s ease-in-out;
     }
 }
 
-.bground-container {
-    .bground {
+.jumpUp-container {
+    height: 60vh;
+    overflow: hidden;
+    .jumpUp-item {
         transform: translateY(100vh);
         transition: transform 0.3s ease-in-out;
     }
@@ -64,11 +66,11 @@ section {
 
 /*********** SECTION ACTIVE **********/
 section.active .sectionTopic{
-    h1,
-    h2 {
-        animation: jumpOut 0.5s ease 0.3s 1 normal forwards;
+    .title,
+    .subtitle {
+        animation: jumpOut 0.5s ease 1 normal forwards;
         transform: translateX(0);
-        transition: transform 0.8s 0.6s ease;
+        transition: transform 0.8s ease;
     }
 }
 @keyframes jumpOut {
@@ -81,15 +83,15 @@ section.active .sectionTopic{
     }
 }
 
-section.active .bground {
-    animation: jumpUp 0.5s ease-in-out 0.3s 1 normal forwards;
+section.active .jumpUp-item {
+    animation: jumpUp 0.5s ease-in-out 1 normal;
     transform: translateX(0);
-    transition: transform 0.5s 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 @keyframes jumpUp {
     0% {
-        transform: translateY(100%);
+        transform: translateY(100vh);
         height: 80%;
     }
 

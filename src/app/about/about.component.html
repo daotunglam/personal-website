@@ -1,36 +1,129 @@
 <section id="about">
     <div class="sectionTopic">
-        <div>
-            <h1>ABOUT ME</h1>
+        <h1 class="title">ABOUT ME</h1>
+        <button mat-button (click)="mySkills_closed = !mySkills_closed" class="subtitle">
+            <mat-icon>
+                arrow_back
+            </mat-icon>
+        </button>
+    </div>
+
+    <div class=" jumpUp-container">
+        <div class="d-flex justify-content-between jumpUp-item">
+            <div class="content appear" [ngClass]="{'closed': mySkills_closed == true}"
+                id="mySkills">
+                <h2>MY SKILLS</h2>
+                <table class="empty">
+                    <tr>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="bg-white col-ct-bw">
+                            <i class="fab fa-js-square"></i>
+                            <div class="skill_bar">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="empty"></td>
+                        <td class="bg-white col-ct-bw">
+                            <i class="fab fa-css3"></i>
+                            <div class="skill_bar">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </td>
+                        <td><i class="fas fa-table-tennis"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="bg-white col-ct-bw">
+                            <i class="fab fa-html5"></i>
+                            <div class="skill_bar">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </td>
+                        <td><i class="fas fa-hiking"></i></td>
+                        <td class="bg-white col-ct-bw">
+                            <i class="fab fa-angular"></i>
+                            <div class="skill_bar">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="empty"></td>
+                        <td class="bg-white col-ct-bw">
+                            <i class="fab fa-bootstrap"></i>
+                            <div class="skill_bar">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </td>
+                        <td><i class="fab fa-pied-piper-alt"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                        <td class="bg-white col-ct-bw">
+                            <i class="fab fa-git-alt"></i>
+                            <div class="skill_bar">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="content bground-container appear"
+                [ngClass]="{'closed': mySkills_closed == false}">
+                <img class="bground" src="./assets/img/aboutme.jpg">
+
+                <h2>I LOVE TECHNOLOGY</h2>
+                <i>
+                    For me, the codes like the Lego pieces,
+                    programming makes me happy like playing Lego.
+                    I've ever coded over 16 hours with just two short breaks
+                    and continue doing like that in many days. <br>
+                    <br>
+                    If you have ever played Lego,
+                    you know, some nights you couldn't sleep
+                    because you got stuck on some challenges.
+                    And how rewarding the feeling when you could overcome them,
+                    what you had brainstormed for many hours. <br>
+                    <br>
+                    Programming is exciting for me exactly like that.
+                </i>
+            </div>
         </div>
 
-        <div>
-            <h2>
-                I love programming.
-            </h2>
-
-            <p>
-                For me, the codes like the Lego peaces, <br>
-                programming make me happy like playing Lego. <br>
-                Sometime I code 16 hours with just two short breaks <br>
-                and do like that in many days. <br>
-                If you have ever played Lego, <br>
-                you know, some nights you can't sleep <br>
-                because your Lego set wasn't finished. <br>
-                And how great feeling when you resolve a problem, <br>
-                what you had many hours brainstormt. <br>
-                Programming is excited for me exactly like that.
-            </p>
-
-            <a style="text-decoration: none; color: currentColor;" target="_blank" href="template/lebenslauf/lebenslauf.html">
-                <h2 class=" btn-extend active">
-                    my skills
-                    <i class="fas fa-angle-double-right"></i>
-                </h2>
-            </a>
-        </div>
     </div>
-    <div class="bground-container">
-        <img class="bground" src="./assets/img/aboutme.jpg">
-    </div>
+
 </section>

@@ -1,6 +1,7 @@
 #projects {
     padding: 5rem 1rem;
     .sectionTopic {
+        width: fit-content;
         h1 {
             padding: 1rem 0;
             font-size: 3rem;
@@ -88,6 +89,7 @@
                     color: white;
                     text-shadow: 0px 0px 20px black;
                 }
+                box-shadow: 0 0 20px black;
                 &:hover {
                     z-index: 999;
                     filter: brightness(1.2);

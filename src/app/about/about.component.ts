@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  mySkills_closed = false;
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

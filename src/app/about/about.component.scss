@@ -1,4 +1,4 @@
-#about{
+#about {
     padding: 5rem 1rem;
     .sectionTopic {
         h1 {
@@ -6,15 +6,87 @@
             font-size: 3rem;
             white-space: nowrap;
         }
+        button {
+            @media (min-width: 800px) {
+                display: none;
+            }
+        }
     }
-    .bground-container{
+
+    .content {
+        position: absolute;
+        width: 100%;
+        @media (min-width: 800px) {
+            position: relative;
+        }
+        h2 {
+            text-align: right;
+        }
+    }
+    .appear {
+        animation: jumpOut 0.5s ease 1 normal forwards;
+        transform: translateX(0);
+        transition: transform 0.8s ease;
+    }
+    // .responsive-width {
+    //     width: calc(100%);
+    //     @media (min-width: 480px) {
+    //         width: calc(100% - 8rem);
+    //     }
+    // }
+    .closed {
+        @media (max-width: 800px) {
+            display: none;
+            overflow: hidden;
+        }
+    }
+
+    #mySkills {
+        * {
+            border: none;
+        }
+        table {
+            float: right;
+            margin-top: 1rem;
+            td{
+                width: 6rem;
+                @media (min-width: 480px) {
+                    width: 8rem;
+                }
+            }
+            td > i {
+                font-size: 3rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .bg-white {
+                background-image: linear-gradient(to right, white 40%, black);
+                color: black;
+            }
+            .skill_bar > i {
+                font-size: 0.5rem;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+
+    .bground-container {
         height: 60vh;
-        width: fit-content;
-        max-width: 100%;
         overflow: hidden;
-        .bground{
+        .bground {
             opacity: 0.7;
             object-position: left;
+            position: absolute;
+            z-index: -1;
+        }
+        i {
+            max-width: 280px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
         }
     }
 
@@ -32,14 +104,12 @@
                 font-size: 1.5rem;
             }
         }
-    }
-
-    @media (min-width: 1024px) {
-        display: flex;
-        justify-content: space-between;
-        .bground-container{
-            height: 100%;
+        .bground-container {
+            width: 100%;
             margin-left: 3rem;
+        }
+        #mySkills {
+            width: 600px;
         }
     }
 }
