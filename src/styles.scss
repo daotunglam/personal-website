@@ -55,8 +55,6 @@ section {
 }
 
 .jumpUp-container {
-    height: 60vh;
-    overflow: hidden;
     .jumpUp-item {
         transform: translateY(100vh);
         transition: transform 0.3s ease-in-out;
@@ -68,9 +66,9 @@ section {
 section.active .sectionTopic{
     .title,
     .subtitle {
-        animation: jumpOut 0.5s ease 1 normal forwards;
+        animation: jumpOut 0.5s ease-in-out 1 normal forwards;
         transform: translateX(0);
-        transition: transform 0.8s ease;
+        transition: transform 0.8s ease-in-out;
     }
 }
 @keyframes jumpOut {
@@ -84,8 +82,8 @@ section.active .sectionTopic{
 }
 
 section.active .jumpUp-item {
-    animation: jumpUp 0.5s ease-in-out 1 normal;
-    transform: translateX(0);
+    animation: jumpUp 0.5s ease-in-out 1 normal forwards;
+    transform: translateY(0);
     transition: transform 0.5s ease-in-out;
 }
 
