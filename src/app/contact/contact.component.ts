@@ -16,7 +16,7 @@ export class ContactComponent implements OnInit {
   };
 
   post = {
-    endPoint: 'http://tung-lam-dao.developerakademie.com/portfolio-angular/sendMail.php', // Ex. www.my-domain/sendMail.php
+    endPoint: 'https://tunglam-dao.com.de/sendMail.php', // Ex. www.my-domain/sendMail.php
 
     body: (payload: any) => JSON.stringify(payload),
 
