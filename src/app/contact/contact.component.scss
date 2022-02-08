@@ -23,7 +23,12 @@
     .bground-container {
         height: 60vh;
         width: 100%;
-        overflow: hidden;
+        overflow: scroll;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        &::-webkit-scrollbar {
+            display: none;
+        }
         background-color: transparent;
         .bground {
             height: 100%;
@@ -68,7 +73,7 @@
     @media (min-width: 1024px) {
         display: flex;
         justify-content: space-between;
-        .bground-container{
+        .bground-container {
             height: 100%;
             .bground textarea {
                 height: 16rem;

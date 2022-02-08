@@ -10,7 +10,7 @@
 
     <div class="bground-container jumpUp-container" id="projectsContainer">
         <div id="stage" class="bground jumpUp-item">
-            <div id="shape" class="backfaces" [class.stack]="stack" [class.ring]="ring">
+            <div id="shape" [class.stack]="stack" [class.ring]="ring">
 
                 <div *ngFor="let project of projects; index as i" class="project {{project.id}}"
                     style="background-image: url('{{project.backgroundImgMobile}}');" (click)="openDialog(i)">

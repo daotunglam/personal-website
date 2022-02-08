@@ -19,7 +19,7 @@ switch($_SERVER['REQUEST_METHOD']){
 
         $recipient = 'lam90namdinh@gmail.com'; //my email address
         $subject = "Contact From $name <$email>";
-        $headers = "From:  noreply@tung-lam-dao.developerakademie.com";
+        $headers = "From:  noreply@tunglam-dao.com.de";
 
         mail($recipient, $subject, $message, $headers);
         break;
