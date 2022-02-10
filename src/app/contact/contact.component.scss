@@ -23,12 +23,6 @@
     .bground-container {
         height: 60vh;
         width: 100%;
-        overflow: scroll;
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
-        &::-webkit-scrollbar {
-            display: none;
-        }
         background-color: transparent;
         .bground {
             height: 100%;
