@@ -36,6 +36,28 @@ body {
 
 /************ MAIN ***********/
 
+/*********** MOBILE ROTATE**********/
+#main.mobileRotate {
+    @media screen and (max-height: 650px) {
+        height: fit-content;
+        scroll-snap-type: unset;
+        section {
+            .sectionTopic {
+                .title,
+                .subtitle {
+                    transform: translateX(0);
+                }
+            }
+            .jumpUp-container {
+                .jumpUp-item {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}
+/*********** MOBILE ROTATE**********/
+
 /************ SECTION ***********/
 section {
     background: rgba(0, 0, 0, 1) no-repeat center center/cover;
@@ -61,7 +83,7 @@ section {
 /************ SECTION ***********/
 
 /*********** SECTION ACTIVE **********/
-section.active .sectionTopic{
+section.active .sectionTopic {
     .title,
     .subtitle {
         animation: jumpOut 0.5s ease-in-out;

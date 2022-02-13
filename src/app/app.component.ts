@@ -20,17 +20,18 @@ export class AppComponent implements OnInit {
    * next/prev section
    */
   changeSection() {
-    this.toSection('home');
-    this.toSection('quote');
-    this.toSection('about');
-    this.toSection('projects');
-    this.toSection('contact');
+      this.toSection('home');
+      this.toSection('quote');
+      this.toSection('about');
+      this.toSection('projects');
+      this.toSection('contact');
   }
   toSection(x: string) {
-    if (this.isInViewport(x)) {
+    if (window.innerHeight >650 && this.isInViewport(x)) {
       document.getElementById(x)!.classList.add('active');
       this.sidenav.changeActiveStickOnSidenav(x); //this function is in file sidenav.js
-    } else {
+    } 
+    else {
       document.getElementById(x)!.classList.remove('active');
     }
 

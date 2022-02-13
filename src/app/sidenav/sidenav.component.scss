@@ -1,5 +1,5 @@
 #sidenav {
-    width: 200px;
+    width: 10rem;
     position: fixed;
     z-index: 999;
     bottom: 1rem;
@@ -24,10 +24,10 @@
         }
     }
 
-    @media screen and (max-height: 650px) {
-        flex-direction: column;
-        width: fit-content;
-        height:160px;
-        left: 1rem;
-    }
+    // @media screen and (max-height: 650px) {
+    //     flex-direction: column;
+    //     width: fit-content;
+    //     height:160px;
+    //     left: 1rem;
+    // }
 }
