@@ -23,4 +23,11 @@
             transform: scale(2);
         }
     }
+
+    @media (max-height: 650px) {
+        flex-direction: column;
+        width: fit-content;
+        height:160px;
+        left: 1rem;
+    }
 }

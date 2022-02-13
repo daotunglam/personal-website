@@ -1,25 +1,23 @@
-#logo{
+#logo {
     position: fixed;
     z-index: 999;
     font-size: 2rem;
-}
+    top: 1rem;
+    left: 1rem;
 
-@media (min-width:801px) {
-    #logo{
-        top: 3rem;
-        left: 6rem;
-    }
-}
-
-@media (max-width:800px) {
-    #logo{
+    @media (min-width: 480px) {
         top: 3rem;
         left: 4rem;
     }
-}
-@media (max-width:480px) {
-    #logo{
+
+    @media (min-width: 800px) {
+        top: 3rem;
+        left: 6rem;
+    }
+
+    @media (max-height: 650px) {
         top: 1rem;
         left: 1rem;
+        font-size: 1.3rem;
     }
 }

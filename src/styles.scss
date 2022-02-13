@@ -50,14 +50,12 @@ section {
     .title,
     .subtitle {
         transform: translateX(-100vw);
-        // transition: transform 0.3s ease-in-out;
     }
 }
 
 .jumpUp-container {
     .jumpUp-item {
         transform: translateY(100vh);
-        // transition: transform 0.3s ease-in-out;
     }
 }
 /************ SECTION ***********/
@@ -68,7 +66,6 @@ section.active .sectionTopic{
     .subtitle {
         animation: jumpOut 0.5s ease-in-out;
         transform: translateX(0);
-        // transition: transform 0.8s ease-in-out;
     }
 }
 @keyframes jumpOut {
@@ -84,7 +81,6 @@ section.active .sectionTopic{
 section.active .jumpUp-item {
     animation: jumpUp 0.5s ease-in-out;
     transform: translateY(0);
-    // transition: transform 0.5s ease-in-out;
 }
 
 @keyframes jumpUp {

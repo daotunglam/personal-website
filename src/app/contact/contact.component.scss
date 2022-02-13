@@ -1,4 +1,5 @@
 #contact {
+    height: fit-content;
     padding: 5rem 1rem;
     .sectionTopic {
         width: fit-content;
@@ -20,36 +21,29 @@
         }
     }
 
-    .bground-container {
-        height: 60vh;
-        width: 100%;
-        background-color: transparent;
-        .bground {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
+        form {
+            height: fit-content;
+            width: 100%;
+            padding: 0.5rem;
             background-color: rgba(255, 255, 255, 0.9);
             color: black;
 
             textarea {
                 height: 10rem;
             }
+            mat-form-field{
+                width: 100%;
+            }
         }
         .btn-send {
             width: 5rem;
         }
-    }
 
     @media (min-width: 480px) {
         padding: 7rem 4rem 4rem;
-        .bground-container {
-            .bground textarea {
+            form textarea {
                 height: 10rem;
             }
-        }
     }
 
     @media (min-width: 800px) {
@@ -67,12 +61,13 @@
     @media (min-width: 1024px) {
         display: flex;
         justify-content: space-between;
-        .bground-container {
-            height: 100%;
-            .bground textarea {
-                height: 16rem;
+            form{
+                height: 100%;
+                margin-left: 3rem;
+
+                textarea {
+                    height: 16rem;
+                }
             }
-            margin-left: 3rem;
-        }
     }
 }

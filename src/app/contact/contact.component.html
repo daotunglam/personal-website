@@ -8,29 +8,37 @@
         </a>
     </div>
 
-    <div class="bground-container">
-        <form class="bground card" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" action="https://tunglam-dao.com.de/sendMail.php">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" action="https://tunglam-dao.com.de/sendMail.php">
 
+        <p>
             <mat-form-field appearance="legacy">
                 <mat-label>Your Name</mat-label>
                 <input matInput type="text" id="name" required [(ngModel)]="contact.name" name="name" #name="ngModel" />
             </mat-form-field>
+        </p>
+        <p>
             <mat-form-field appearance="legacy">
                 <mat-label>Your Email</mat-label>
-                <input matInput type="email" required [(ngModel)]="contact.email" name="email" #email="ngModel" ngModel [email]="true" />
+                <input matInput type="email" required [(ngModel)]="contact.email" name="email" #email="ngModel" ngModel
+                    [email]="true" />
             </mat-form-field>
+        </p>
+        <p>
             <mat-form-field appearance="legacy">
                 <mat-label>Your Message</mat-label>
                 <textarea matInput name="" id="" required placeholder="What would you like to tell me?"
                     [(ngModel)]="contact.message" name="message" #message="ngModel"></textarea>
             </mat-form-field>
+        </p>
+        <p>
 
             <button class="btn-send" mat-flat-button color="primary" type="submit" [disabled]="!contactForm.form.valid"
-            (click)="openSnackBar(name.value)">
+                (click)="openSnackBar(name.value)">
                 Send
             </button>
 
-        </form>
-    </div>
+        </p>
+
+    </form>
 
 </section>

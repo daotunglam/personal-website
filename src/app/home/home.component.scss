@@ -17,7 +17,7 @@
             font-size: 1rem;
         }
     }
-    
+
     // p{
     //     position: absolute;
     //     bottom: 3rem;
@@ -70,6 +70,21 @@
         }
     }
 
+    @media (max-height: 650px) {
+        .sectionTopic {
+            top: auto;
+            bottom: 1rem;
+            *{
+                margin: 0.2rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        .bground-container {
+            height: 90vh;
+        }
+    }
 }
 
 #btnContactMe {
