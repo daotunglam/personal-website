@@ -24,10 +24,7 @@
         }
     }
 
-    // @media screen and (max-height: 650px) {
-    //     flex-direction: column;
-    //     width: fit-content;
-    //     height:160px;
-    //     left: 1rem;
-    // }
+    @media screen and (max-height: 650px) {
+        display: none;
+    }
 }

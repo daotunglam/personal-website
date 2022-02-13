@@ -106,27 +106,24 @@
             width: 600px;
         }
     }
-    // @media screen and (max-height: 650px) {
-    //     padding: 3rem;
-    //     display: flex;
-    //     justify-content: space-between;
-    //     .sectionTopic {
-    //         h1 {
-    //             font-size: 2rem;
-    //         }
-    //         h2 {
-    //             font-size: 1rem;
-    //         }
-    //     }
-    //     .bground-container {
-    //         width: 100%;
-    //         height: 20rem;
-    //         margin-left: 3rem;
-    //     }
-    //     #mySkills{
-    //         h2{
-    //             display: none;
-    //         }
-    //     }
-    // }
+
+    @media screen and (max-height: 650px) {
+        padding: 3rem;
+        height: fit-content;
+        
+        .sectionTopic {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1rem;
+            }
+        }
+        .content{
+            position: relative;
+        }
+        .bground-container {
+            height: 26rem;
+        }
+    }
 }
