@@ -47,18 +47,18 @@
 
 
 
-@media (min-width: 480px) {
+@media screen and (min-width: 480px) {
     #wrapperMenu {
         top: 3rem;
         right: 4rem;
     }
 }
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
     #wrapperMenu {
         right: 6rem;
     }
 }
-@media (max-height: 650px) {
+@media screen and (max-height: 650px) {
     #wrapperMenu {
         top: 1rem;
         right: 1rem;
