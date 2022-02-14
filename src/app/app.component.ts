@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
       this.toSection('contact');
   }
   toSection(x: string) {
-    if (window.innerHeight >650 && this.isInViewport(x)) {
+    if (window.innerHeight >480 && this.isInViewport(x)) {
       document.getElementById(x)!.classList.add('active');
       this.sidenav.changeActiveStickOnSidenav(x); //this function is in file sidenav.js
     } 

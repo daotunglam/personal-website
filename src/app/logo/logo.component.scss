@@ -15,7 +15,7 @@
         left: 6rem;
     }
 
-    @media screen and (max-height: 480px) {
+    @media screen and (max-height: 480px) and (orientation : landscape) {
         top: 1rem;
         left: 1rem;
         font-size: 1.3rem;

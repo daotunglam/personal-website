@@ -70,7 +70,7 @@
         }
     }
 
-    @media screen and (max-height: 480px) {
+    @media screen and (max-height: 480px) and (orientation : landscape) {
         .sectionTopic {
             top: auto;
             bottom: 1rem;

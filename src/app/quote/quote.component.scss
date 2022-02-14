@@ -41,7 +41,7 @@
             left: 6rem;
         }
     }
-    @media screen and (max-height: 480px) {
+    @media screen and (max-height: 480px) and (orientation : landscape) {
         .bground-container {
             position: relative;
             top:auto;
