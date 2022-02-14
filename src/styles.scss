@@ -38,7 +38,7 @@ body {
 
 /*********** MOBILE ROTATE**********/
 #main.mobileRotate {
-    @media screen and (max-height: 650px) {
+    @media screen and (max-height: 480px) {
         height: fit-content;
         scroll-snap-type: unset;
         section {

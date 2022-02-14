@@ -71,7 +71,7 @@
         }
     }
 
-    @media screen and (max-height: 650px) {
+    @media screen and (max-height: 480px) {
         height: fit-content; //otherwise background-color is just 100vh, contact-form more than 100vh, look crazy.
         padding: 3rem;
         .sectionTopic {
