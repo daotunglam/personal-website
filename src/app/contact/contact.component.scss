@@ -1,5 +1,4 @@
 #contact {
-    height: fit-content;
     padding: 5rem 1rem;
     .sectionTopic {
         width: fit-content;
@@ -73,6 +72,7 @@
     }
 
     @media screen and (max-height: 650px) {
+        height: fit-content; //otherwise background-color is just 100vh, contact-form more than 100vh, look crazy.
         padding: 3rem;
         .sectionTopic {
             h1 {

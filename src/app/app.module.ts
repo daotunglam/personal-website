@@ -24,6 +24,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { DialogProjectsFullDetailComponent } from './dialog-projects-full-detail/dialog-projects-full-detail.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { DialogPrivacyPolicyComponent } from './dialog-privacy-policy/dialog-privacy-policy.component';
+import { DialogImprintComponent } from './dialog-imprint/dialog-imprint.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -38,8 +41,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     ProjectsComponent,
     ContactComponent,
     DialogProjectsFullDetailComponent,
+    DialogPrivacyPolicyComponent,
+    DialogImprintComponent,
   ],
   imports: [
+    MatMenuModule,
     MatSnackBarModule,
     MatDialogModule,
     MatIconModule,

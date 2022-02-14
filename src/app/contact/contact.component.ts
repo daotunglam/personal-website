@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
+import { MatDialog } from '@angular/material/dialog';
+import { DialogPrivacyPolicyComponent } from '../dialog-privacy-policy/dialog-privacy-policy.component';
+import { DialogImprintComponent } from '../dialog-imprint/dialog-imprint.component';
 
 @Component({
   selector: 'app-contact',
@@ -9,6 +11,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+
+  DialogPrivacyPolicyComponent = DialogPrivacyPolicyComponent;
+  DialogImprintComponent = DialogImprintComponent;
+
+
   contact = {
     name: '',
     email: '',
@@ -28,9 +35,11 @@ export class ContactComponent implements OnInit {
     },
   };
 
+
   constructor(
     private http: HttpClient,
-    private _snackBar: MatSnackBar
+    private _snackBar: MatSnackBar,
+    public dialog: MatDialog,
   ) { }
 
   openSnackBar(name: string) {

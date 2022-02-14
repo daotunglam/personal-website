@@ -41,4 +41,13 @@
 
     </form>
 
+    <div class="position-absolute bottom-0 start-0">
+        <button mat-button [matMenuTriggerFor]="menu"><mat-icon>information</mat-icon></button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="dialog.open(DialogImprintComponent)">Imprint</button>
+            <button mat-menu-item (click)="dialog.open(DialogPrivacyPolicyComponent)">Privacy Policy</button>
+        </mat-menu>
+    </div>
+
+
 </section>
