@@ -26,7 +26,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DialogPrivacyPolicyComponent } from './dialog-privacy-policy/dialog-privacy-policy.component';
 import { DialogImprintComponent } from './dialog-imprint/dialog-imprint.component';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import {MatMenuModule} from '@angular/material/menu';
     DialogImprintComponent,
   ],
   imports: [
+    MatButtonToggleModule,
     MatMenuModule,
     MatSnackBarModule,
     MatDialogModule,

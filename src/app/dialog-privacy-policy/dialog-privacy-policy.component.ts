@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dialog-privacy-policy.component.scss']
 })
 export class DialogPrivacyPolicyComponent implements OnInit {
+  english_open = true;
 
   constructor() { }
 
