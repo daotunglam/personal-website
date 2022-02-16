@@ -1,7 +1,7 @@
-# PortfolioAngular
+# DAO TUNG-LAM PORTFOLIO built with angular
 <a href="https://tunglam-dao.com.de">https://tunglam-dao.com.de</a>
 
-## CONTROL THE FUNCTIONS OF A COMPONENT FROM AN OTHER COMPONENT:
+## Control the functions of a component from an other component:
 
  ex. we want that: <br>
  ``app.component`` handles the function ``changeActiveStickOnSidenav()`` of ``sidenav.component`` by scrolling, then:
