@@ -25,7 +25,8 @@ export class ProjectsComponent implements OnInit {
       backgroundImgMobile: './assets/img/kanban/mobile_Board.PNG',
       programmingLanguage: 'Bootstrap, Javascript, PHP',
       description: 'A Web-app with feature drag-drop that was built with Javascript.\n The web-app is able to be used by many users that conecting together on server.',
-      href: 'http://gruppe-115.developerakademie.net/task.html'
+      // href: 'http://gruppe-115.developerakademie.net/task.html'
+      href: 'http://daniel-helfenstein.developerakademie.com/canbanboard/'
     },
     {
       id: 'two',

@@ -1,14 +1,15 @@
 # PortfolioAngular
+<a href="https://tunglam-dao.com.de>https://tunglam-dao.com.de/</a>
 
-## CONTROL THE FUNCTIONS OF AN OTHER COMPONENT FROM A COMPONENT:
+## CONTROL THE FUNCTIONS OF A COMPONENT FROM AN OTHER COMPONENT:
 
-### ex. we want that
+ ex. we want that: <br>
  ``app.component`` handles the function ``changeActiveStickOnSidenav()`` of ``sidenav.component`` by scrolling, then:
 
 ````
 import {header.component} from '.header/header.component';
-header = HeaderComponent;
-this.header.hideHeader(){...} 
+headerComponent = HeaderComponent;
+this.headerComponent.hideHeader(){...} 
 ````
 
 ## deploy folder dist on server but page is EMPTY
