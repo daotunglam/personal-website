@@ -1,5 +1,5 @@
 # PortfolioAngular
-<a href="https://tunglam-dao.com.de>https://tunglam-dao.com.de/</a>
+<a href="https://tunglam-dao.com.de">https://tunglam-dao.com.de</a>
 
 ## CONTROL THE FUNCTIONS OF A COMPONENT FROM AN OTHER COMPONENT:
 
